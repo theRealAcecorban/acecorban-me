@@ -1,43 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
   <head>
+    <script src="%PUBLIC_URL%/js/color-modes.js"></script>
+    <link rel="icon" type="image/x-icon" href="%PUBLIC_URL%/images/favicon.png">    
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <title>Ace Corban</title>
+    <link href="%PUBLIC_URL%/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="%PUBLIC_URL%/css/styles.css" rel="stylesheet">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <script src="%PUBLIC_URL%/js/data.js"></script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+      <a name="top"></a>
+      <header data-bs-theme="dark" class="fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" style="padding-left:1em;" href="">
+              <img src="%PUBLIC_URL%/images/acecorban.png" alt="Ace Corban" style="width:23px; height:23px;" />
+              acecorban.me
+          </a>
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Precious Metal Asset Portfolio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="whoAmI.html">Who Am I?</a>
+              </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="py-5 text-center container">
+            <h1 class="fw-light text-center">
+                A Tech-Agnostic Demonstration
+            </h1>
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <p class="lead text-body-secondary">
+                        This site serves as a collection of various implementations of the same basic application.  The purpose is to
+                        demonstrate how vastly different tech stacks can be used to provide different solutions to the same problem. 
+                        It is being hosted on an <span class="techHighlight">AWS S3 Bucket</span> and all DNS routing is managed via <span class="techHighlight">AWS Route 53</span>.   
+                    </p>
+                    <p class="lead text-body-secondary">
+                        This is a basic application that allows a user to create an inventory of precious metals they physically own and provide 
+                        an up to date valuation of their asset portfolio.  Each solution must allow for user registration, authentication and 
+                        authorization so that everyone's collection is private to themselves.  It allows a user the ability to add, modify, or 
+                        remove collections from their portfolio as needed.  In addition, a third party API is referenced to pull the latest 
+                        spot prices of commonly collected metals and total valuations are calculated for the user in a simple table.
+                    </p>
+                    <p class="lead text-body-secondary">
+                        In order for this demonstration to be successful, all solutions must share the same data source for assets, 
+                        which is stored using a <span class="techHighlight">Google Firebase Realtime Database</span>.  Additionally, authentication must be cross-domain
+                        as different solutions will be hosted on different cloud services.  Authentication is managed via 
+                        <span class="techHighlight">Google Firebase Authentication </span> and allows a user to either register with 
+                        standard email/password or through their Google Account.
+                    </p>
+                </div>
+            </div>
+            <p id="projectCategoryNav"></p>
+        </section>
+        <div id="projectCategories"></div>     
+      </main>
+      <script src="%PUBLIC_URL%/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
